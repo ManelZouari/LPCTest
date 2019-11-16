@@ -6,6 +6,7 @@ import com.lakooz.lpctest.model.Pot
 import io.reactivex.Single
 
 class PotRepository(private val potDao: PotDao) {
+    /*
 
     fun createOrUpdate(pot: Pot) {
         potDao.createOrUpdate(pot)
@@ -21,5 +22,7 @@ class PotRepository(private val potDao: PotDao) {
         // TODO : initialize
         val instance : PotRepository
     }
+
+     */
 
 }

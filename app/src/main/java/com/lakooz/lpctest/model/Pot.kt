@@ -1,12 +1,19 @@
 package com.lakooz.lpctest.model
 
 import androidx.room.Entity
+import java.util.*
 
 @Entity
 data class Pot(
     val identifier: String,
-    val name: String
+    val name: String,
     // TODO : add missing fields
+    val creationDate : Date,
+    val category : Int ,
+    val contributorsCount : Int ,
+    val amount : Double,
+    val imageUrl : String
+
 ) {
 
 

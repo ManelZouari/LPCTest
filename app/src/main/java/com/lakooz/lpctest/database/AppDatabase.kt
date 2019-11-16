@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase
 
 // TODO
 abstract class AppDatabase : RoomDatabase() {
-
+/*
     //TODO
 
     companion object {
@@ -16,6 +16,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         // TODO : implement
         fun buildDatabase(context: Context) : AppDatabase {
+
 
         }
 
@@ -32,4 +33,6 @@ abstract class AppDatabase : RoomDatabase() {
         }
 
     }
+
+ */
 }

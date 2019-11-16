@@ -3,25 +3,33 @@ package com.lakooz.lpctest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2
+
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // TODO : set content view and declare views
+        setContentView(R.layout.activity_main)
 
 
-        viewPager.adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+        viewPager2.adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
 
         setSupportActionBar(toolbar)
 
-        TabLayoutMediator(tabLayout, viewPager,
+        TabLayoutMediator(tab_layout, viewPager2,
             TabLayoutMediator.TabConfigurationStrategy { tab, position ->
                 // TODO : set tabs titles
+                when (position){
+                    0 -> {tab.text = "ANNIVERSAIRE"}
+                    1 -> {tab.text = "DEPART"}
+                    2 -> {tab.text = "SOLIDAIRE"}
+                }
             }).attach()
 
-
+/*
        swipeRefreshLayout.setProgressViewOffset(true, START_SWIPE_REFRESH, resources.getDimension(R.dimen.swipe_refresh_offset).toInt())
 
         // TODO : set up view model
@@ -32,10 +40,12 @@ class MainActivity : AppCompatActivity() {
             // TODO
         }
 
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+ */
+
+        viewPager2.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrollStateChanged(state: Int) {
                 val viewPagerIdle = state == ViewPager2.SCROLL_STATE_IDLE
-                swipeRefreshLayout.isEnabled = viewPagerIdle
+               // swipeRefreshLayout.isEnabled = viewPagerIdle
             }
         })
 

@@ -7,10 +7,10 @@ import com.lakooz.lpctest.repositories.PotRepository
 
 class PotsViewModel() : ViewModel() {
 
-    private val repository = PotRepository.instance
+    //private val repository = PotRepository.instance
 
     // TODO : initialize
-    val pots : LiveData<List<Pot>>
+    //val pots : LiveData<List<Pot>>
 
 
 }

@@ -1,6 +1,7 @@
 package com.lakooz.lpctest
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -21,14 +22,19 @@ class PotAdapter(private val context: Context, private var emptyView: View? = nu
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
        //TODO
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = PotItemBinding.inflate(inflater)
+        return ViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
         // TODO
+        return pots!!.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // TODO : bind view holder & format amount properly
+
 
     }
 

@@ -6,7 +6,7 @@ import io.reactivex.Single
 object RestApiClient {
 
     private const val BASE_URL = "https://recrutement.lepotcommuntest.fr/2019/recruiting/"
-
+/*
     fun getPots(): Single<List<Pot>> {
         // TODO
     }
@@ -14,4 +14,6 @@ object RestApiClient {
     fun createPot(category: Int): Single<Pot> {
         // TODO
     }
+
+ */
 }

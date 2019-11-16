@@ -13,6 +13,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
+    /*
 
     private val repository = PotRepository.instance
 
@@ -75,4 +76,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
             )
     }
+
+     */
 }
