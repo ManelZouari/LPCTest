@@ -1,6 +1,7 @@
 package com.lakooz.lpctest.database
 
-import androidx.room.Dao
+import androidx.room.*
+import androidx.room.OnConflictStrategy.REPLACE
 import com.lakooz.lpctest.model.Pot
 
 
@@ -13,5 +14,16 @@ abstract class PotDao {
     }
 
     // TODO : add missing methods
+
+    @Query("SELECT * FROM pot")
+    abstract fun getAll(): List<Pot>
+
+    @Insert(onConflict = REPLACE)
+    abstract fun insert(pot : Pot)
+
+    @Delete
+    abstract fun delete(pot: Pot)
+
+
 
 }

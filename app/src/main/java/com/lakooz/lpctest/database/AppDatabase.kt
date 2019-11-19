@@ -1,12 +1,20 @@
 package com.lakooz.lpctest.database
 
 import android.content.Context
-import androidx.room.RoomDatabase
+import androidx.room.*
+import com.lakooz.lpctest.model.Pot
 
 // TODO
+
+@TypeConverters(DateConverter::class)
+
+
+@Database(entities = arrayOf(Pot::class), version = 1)
+
 abstract class AppDatabase : RoomDatabase() {
-/*
+
     //TODO
+    abstract fun potdao():PotDao
 
     companion object {
 
@@ -16,6 +24,10 @@ abstract class AppDatabase : RoomDatabase() {
 
         // TODO : implement
         fun buildDatabase(context: Context) : AppDatabase {
+            return Room.databaseBuilder(context, AppDatabase::class.java ,DATABASE_NAME)
+                .allowMainThreadQueries()
+                .fallbackToDestructiveMigration()
+                .build()
 
 
         }
@@ -34,5 +46,5 @@ abstract class AppDatabase : RoomDatabase() {
 
     }
 
- */
+
 }
