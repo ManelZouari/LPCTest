@@ -9,6 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lakooz.lpctest.databinding.PotsFragmentBinding
+import com.lakooz.lpctest.model.Pot
+import com.lakooz.lpctest.networking.RestApiClient
+import kotlinx.android.synthetic.main.pots_fragment.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.util.function.Consumer
 
 class PotsFragment : Fragment() {
 
@@ -23,6 +30,20 @@ class PotsFragment : Fragment() {
 
        // set up recycler view
 
+/*
+//////////this code is only to test the API Rest function ///////////
+        val apiService = RestApiClient ()
+        GlobalScope.launch(Dispatchers.Main) {
+            val mypot = apiService.getPots().await()
+            textview.text = mypot[1].name
+            val a = apiService.createPot(2).await()
+
+            }
+//////////////////////////////////////////////////////////////////////
+
+
+
+ */
 
       // TODO : set up view model
 
